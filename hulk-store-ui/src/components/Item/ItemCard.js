@@ -9,7 +9,7 @@ function ItemCard (props) {
                 <div className='column is-12'>
                     <div class="card is-1by1">
                         <div class="card-image">
-                            <figure class="image is-1by1">
+                            <figure class="image">
                                 <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Product rep"></img>
                             </figure>
                         </div>

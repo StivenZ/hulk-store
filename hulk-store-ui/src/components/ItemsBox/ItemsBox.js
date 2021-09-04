@@ -9,7 +9,7 @@ function ItemsBox (props) {
     return (
         <React.Fragment>
             <div className='box'>
-                <div className='columns mt-5 is-8 is-variable'>
+                <div className='columns mt-5 is-8 is-variable is-flex-wrap-wrap'>
                     <ItemCard mockData={items}/>
                 </div>
             </div>
