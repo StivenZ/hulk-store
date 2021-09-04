@@ -7,7 +7,7 @@ function HomePage () {
         <React.Fragment>
             <Layout>
                 <div className='box'>
-                    <p>Coma Mierda Chinbakare</p>
+                    <p>HomePage</p>
                 </div>
             </Layout>
         </React.Fragment>
