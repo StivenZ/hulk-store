@@ -4,7 +4,7 @@ const mockData = [
         id: 1,
         available: true,
         unitPrice: 500,
-        size: 3,
+        size: 10,
         type: 'clothing',
         created_at: Date.now(),
     },
@@ -31,7 +31,7 @@ const mockData = [
         id: 4,
         available: true,
         unitPrice: 500,
-        size: 3,
+        size: 0,
         type: 'clothing',
         created_at: Date.now(),
     },
@@ -40,7 +40,7 @@ const mockData = [
         id: 5,
         available: true,
         unitPrice: 500,
-        size: 3,
+        size: 134,
         type: 'clothing',
         created_at: Date.now(),
     },
@@ -49,10 +49,80 @@ const mockData = [
         id: 6,
         available: true,
         unitPrice: 500,
-        size: 3,
+        size: 65,
+        type: 'clothing',
+        created_at: Date.now(),
+    },
+    {
+        name: 'batman figure',
+        id: 6,
+        available: true,
+        unitPrice: 500,
+        size: 65,
+        type: 'clothing',
+        created_at: Date.now(),
+    },
+    {
+        name: 'batman figure',
+        id: 6,
+        available: true,
+        unitPrice: 500,
+        size: 65,
+        type: 'clothing',
+        created_at: Date.now(),
+    },
+    {
+        name: 'batman figure',
+        id: 6,
+        available: true,
+        unitPrice: 500,
+        size: 65,
+        type: 'clothing',
+        created_at: Date.now(),
+    },
+    {
+        name: 'batman figure',
+        id: 6,
+        available: true,
+        unitPrice: 500,
+        size: 65,
         type: 'clothing',
         created_at: Date.now(),
     }
+];
+
+const metaData = [
+    {
+        type: 'clothing',
+        supplier: 'American Inc'
+    },
+    {
+        type: 'toys',
+        supplier: 'American Inc'
+    },
+    {
+        type: 'plates',
+        supplier: 'Blue Inc'
+    },
+    {
+        type: 'services',
+        supplier: 'West Inc'
+    },
+    {
+        type: 'footwear',
+        supplier: 'American Inc'
+    },
+    {
+        type: 'marvel comics',
+        supplier: 'Marvel'
+    },
+    {
+        type: 'dc comics',
+        supplier: 'DC'
+    }
 ]
 
-export default mockData;
+export {
+    mockData,
+    metaData
+};

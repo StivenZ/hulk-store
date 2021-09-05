@@ -1,9 +1,25 @@
 import React from 'react';
-import mockData from '../../mockData';
+import {mockData} from '../../mockData';
+import redCircle from '../../images/red-circle.png';
+import greenCircle from '../../images/green-circle.png';
+import orangeCircle from '../../images/orange-circle.png';
 
 function ItemCard (props) {
 
     const items = mockData.map((item) => {
+
+        let circleIcon;
+
+        const isAvailable = () =>{
+            if (item.size === 0) {
+                circleIcon = redCircle;
+            } else if (item.size <= 5 && item.size > 0) {
+                circleIcon = orangeCircle;
+            } else circleIcon = greenCircle;
+
+            return circleIcon;
+        }
+
         return (
             <li key={item.id} className='column is-4-tablet is-3-desktop'>
                 <div className='column is-12'>
@@ -15,11 +31,18 @@ function ItemCard (props) {
                         </div>
                         <div class="card-content">
                             <div class="media">
-                                <div class="media-content">
-                                    <p class="title is-4">{item.name}</p>
+                                <div class="block">
+                                    <span className='icon-text is-flex is-justify-content-space-between'>
+                                        <span class="title is-4">{item.name}</span>
+                                        <span className='block level-left'>
+                                            <figure class="image is-24x24">
+                                                <img src={isAvailable()}></img>
+                                            </figure>
+                                        </span>
+
+                                    </span>
                                     <p class="subtitle is-6">@{item.type}</p>
-                                    <p class="subtitle is-6">Available: {toString(item.available)}</p>
-                                    <p class="subtitle is-6">Price: {toString(item.unitPrice)}</p>
+                                    <p class="subtitle is-6">${item.unitPrice}</p>
                                     <p class="subtitle is-6">Total: {item.size}</p>
                                 </div>
                             </div>

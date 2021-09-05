@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemCard from '../Item/ItemCard';
-import mockData from '../../mockData';
+import {mockData} from '../../mockData';
 
 function ItemsBox (props) {
 
