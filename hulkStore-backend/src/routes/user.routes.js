@@ -1,18 +1,8 @@
-import express from 'express';
-import User from '../database/models/User';
+import express from "express";
+import { createUser } from "../controllers/user.controller.js";
 
-const userRouter = express.Router();
+const router = express.Router();
 
-userRouter.get('/register', (req, res) => {
-    res.render('register');
-});
+router.post("/", createUser);
 
-userRouter.post('/register', (req, res) => {
-    const {name, role, password} = req.body;
-    res.send({
-        message: 'User successfully registered!',
-        name: name,
-        role: role
-    });
-
-})
+export default router;

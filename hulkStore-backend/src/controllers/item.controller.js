@@ -1,26 +1,23 @@
-import express from 'express';
-import * as services from './../services/item.service';
+import * as services from "./../services/item.service.js";
 
-async function get (body) {
-    if (body === {}) {
-        return await services.listAll();
-    } else {
-        return await services.listOne(body);
-    }
-}
+export const getItems = async (req, res) => {
+  const items = await services.listAll();
+  res.send(items);
+};
 
-async function post (body) {
-    return await services.create(body);
-}
+export const createItem = async ({ body }, res) => {
+  const newItem = await services.create(body);
+  res.send(newItem);
+};
 
-async function put (body) {
-    return await services.updateOne(body);
-}
+export const updateItem = async ({ body, params }, res) => {
+  const { id } = params;
+  const updatedItem = await services.updatedItem(id, body);
+  res.send(updatedItem);
+};
 
-async function remove (body) {
-    await services.deleteItems(body);
-}
-
-async function sellItem (body) {
-    return await services.sellItem(body);
-}
+export const deleteItem = async (req, res) => {
+  const { id } = req.params;
+  const deleted = services.deleteItems(id);
+  res.send(deleted);
+};
