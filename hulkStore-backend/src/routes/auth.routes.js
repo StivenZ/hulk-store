@@ -15,13 +15,20 @@ function checkPasswords(password, dbPassword) {
   });
 }
 
-authRouter.post("/login", async ({ body }, res) => {
-  const { username, password } = body;
+authRouter.post("/login", async (req, res) => {
+  const { username, password } = req.body;
   const user = await User.findOne({ username });
-  const validPassword = await checkPasswords(password, user.password);
 
-  if (!user || !validPassword)
-    res.status(401).send({ error: true, message: "Unauthorized" });
+  let validPassword = false;
+  try {
+    validPassword = await checkPasswords(password, user.password);
+  } catch (err) {
+    return res.status(401).send({ error: true, message: "Unauthorized" });
+  }
+
+  if (!user || !validPassword) {
+    return res.status(401).send({ error: true, message: "Unauthorized" });
+  }
 
   jwt.sign({ user }, "secretkey", (err, token) => {
     res.json({

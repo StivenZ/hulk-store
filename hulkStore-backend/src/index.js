@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import config from "./config.js";
 import connectDb from "./database/db.js";
 import itemRoutes from "./routes/item.routes.js";
@@ -6,6 +7,7 @@ import authRoutes from "./routes/auth.routes.js";
 import userRoutes from "./routes/user.routes.js";
 
 const app = express();
+app.use(cors());
 const { appl } = config;
 
 app.use(express.json());

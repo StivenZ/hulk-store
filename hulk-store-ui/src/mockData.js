@@ -1,128 +1,125 @@
 const mockData = [
-    {
-        name: 't-shirt',
-        id: 1,
-        available: true,
-        unitPrice: 500,
-        size: 10,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'glass',
-        id: 2,
-        available: true,
-        unitPrice: 500,
-        size: 3,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'toy',
-        id: 3,
-        available: true,
-        unitPrice: 500,
-        size: 3,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'action figure',
-        id: 4,
-        available: true,
-        unitPrice: 500,
-        size: 0,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'comic',
-        id: 5,
-        available: true,
-        unitPrice: 500,
-        size: 134,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'batman figure',
-        id: 6,
-        available: true,
-        unitPrice: 500,
-        size: 65,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'batman figure',
-        id: 6,
-        available: true,
-        unitPrice: 500,
-        size: 65,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'batman figure',
-        id: 6,
-        available: true,
-        unitPrice: 500,
-        size: 65,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'batman figure',
-        id: 6,
-        available: true,
-        unitPrice: 500,
-        size: 65,
-        type: 'clothing',
-        created_at: Date.now(),
-    },
-    {
-        name: 'batman figure',
-        id: 6,
-        available: true,
-        unitPrice: 500,
-        size: 65,
-        type: 'clothing',
-        created_at: Date.now(),
-    }
+  {
+    name: "t-shirt",
+    id: 1,
+    available: true,
+    unitPrice: 500,
+    size: 10,
+    type: "clothing",
+    created_at: Date.now(),
+  },
+  {
+    name: "glass",
+    id: 2,
+    available: true,
+    unitPrice: 500,
+    size: 3,
+    type: "dinner",
+    created_at: Date.now(),
+  },
+  {
+    name: "Oceanman song",
+    id: 3,
+    available: true,
+    unitPrice: 500,
+    size: 3,
+    type: "music",
+    created_at: Date.now(),
+  },
+  {
+    name: "action figure",
+    id: 4,
+    available: true,
+    unitPrice: 500,
+    size: 0,
+    type: "action figure",
+    created_at: Date.now(),
+  },
+  {
+    name: "batman comic",
+    id: 5,
+    available: true,
+    unitPrice: 500,
+    size: 134,
+    type: "comics",
+    created_at: Date.now(),
+  },
+  {
+    name: "batman figure",
+    id: 6,
+    available: true,
+    unitPrice: 500,
+    size: 65,
+    type: "action figures",
+    created_at: Date.now(),
+  },
+  {
+    name: "batman figure",
+    id: 6,
+    available: true,
+    unitPrice: 500,
+    size: 65,
+    type: "action figures",
+    created_at: Date.now(),
+  },
+  {
+    name: "batman figure",
+    id: 6,
+    available: true,
+    unitPrice: 500,
+    size: 65,
+    type: "clothing",
+    created_at: Date.now(),
+  },
+  {
+    name: "batman figure",
+    id: 6,
+    available: true,
+    unitPrice: 500,
+    size: 65,
+    type: "toys",
+    created_at: Date.now(),
+  },
+  {
+    name: "batman figure",
+    id: 6,
+    available: true,
+    unitPrice: 500,
+    size: 65,
+    type: "clothing",
+    created_at: Date.now(),
+  },
 ];
 
 const metaData = [
-    {
-        type: 'clothing',
-        supplier: 'American Inc'
-    },
-    {
-        type: 'toys',
-        supplier: 'American Inc'
-    },
-    {
-        type: 'plates',
-        supplier: 'Blue Inc'
-    },
-    {
-        type: 'services',
-        supplier: 'West Inc'
-    },
-    {
-        type: 'footwear',
-        supplier: 'American Inc'
-    },
-    {
-        type: 'marvel comics',
-        supplier: 'Marvel'
-    },
-    {
-        type: 'dc comics',
-        supplier: 'DC'
-    }
-]
+  {
+    type: "clothing",
+    supplier: "American Inc",
+  },
+  {
+    type: "toys",
+    supplier: "American Inc",
+  },
+  {
+    type: "plates",
+    supplier: "Blue Inc",
+  },
+  {
+    type: "services",
+    supplier: "West Inc",
+  },
+  {
+    type: "footwear",
+    supplier: "American Inc",
+  },
+  {
+    type: "marvel comics",
+    supplier: "Marvel",
+  },
+  {
+    type: "dc comics",
+    supplier: "DC",
+  },
+];
 
-export {
-    mockData,
-    metaData
-};
+export { mockData, metaData };
