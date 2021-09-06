@@ -13,7 +13,7 @@ Product CRUD uses the following resources:
 | | route | method | description |
 | --- | ----- | ------ | ----------- |
 | **/api/items** | GET | retrieves all the products in the database |
-| **/api/user** | GET | create a new user with admin privileges |
+| **/api/user** | POST | create a new user with admin privileges |
 | **/api/auth/login** | POST | login and creates a new token for a user with privileges to perform CRUD operations |
 
 ## Getting started
