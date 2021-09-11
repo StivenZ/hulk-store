@@ -13,14 +13,19 @@ function SearchBar(props) {
     }
   }
 
+  function handleChange(event) {
+    props.handleInput(event.target.value);
+  }
+
   return (
     <React.Fragment>
       <div className="box">
         <input
-          className="input is-primary"
+          className="input is-primary ml-2 mr-2"
           type="text"
           placeholder="Product name"
           size="1"
+          onChange={handleChange}
         ></input>
 
         <div className={toggle.name}>
@@ -56,6 +61,7 @@ function SearchBar(props) {
             </div>
           </div>
         </div>
+        {/* <div>{props.itemToShow}</div> */}
       </div>
     </React.Fragment>
   );

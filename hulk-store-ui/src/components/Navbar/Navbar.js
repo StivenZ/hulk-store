@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <React.Fragment>
-      <div className="block ml-2">
+      <div className="block ml-2 mr-2">
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div id="navbarBasicExample" className="navbar-menu is-active">
             <div className="navbar-start">
